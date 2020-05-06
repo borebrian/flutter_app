@@ -1,46 +1,43 @@
+import 'dart:math';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterapp/screens/screen_1.dart';
 
-void main() => runApp(
+void main() =>
+runApp(new myapp());
 
-  MaterialApp(
-    title: "Fuela",
- home: Scaffold(
-   appBar: AppBar(
-     title: Text('First flutter sdf app'),
+class myapp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return
+      MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "Fuela",
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('First flutter sdf app'),
 
-     centerTitle: true,
-     backgroundColor: Colors.deepOrange,
-   ),
-   body: Material(
-     color: Colors.deepOrange[400],
-     child:Center(
-       child: Text(
-         "Increment a text",
-           textDirection: TextDirection.rtl,
-       style: TextStyle(
-         color: Colors.white,
-         fontSize: 40,
+            centerTitle: true,
+            backgroundColor: Colors.deepOrange,
+          ),
+          body: FirstScreen(),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {
 
-       ),
-
-     ),
-     ),
-
-   ),
-   floatingActionButton: FloatingActionButton(
-     onPressed: (){
-
-     },
-     child:Text("Add"),
+            },
+            child: Text("Add"),
 
 
+            backgroundColor: Colors.deepOrange,
+          ),
+
+        ),
 
 
-     backgroundColor: Colors.deepOrange,
-   ),
-
- ),
+      );
+  }
 
 
-));
-
+}
